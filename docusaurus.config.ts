@@ -136,5 +136,13 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 };
-
+module.exports = {
+  themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
+  },
+};
 export default config;
