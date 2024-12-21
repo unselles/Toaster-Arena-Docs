@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Overview for weapon data assets
+### Overview for weapon data assets
 
 :::caution
 This is a highly complex system with a lot of atributes, all the values should be documented here. But if some are missing, descriptions can be found at the `Data Asset` variables.
@@ -28,7 +28,7 @@ These are a combination of animation montages used for character animation and a
 :::caution
 Character animation must be strictly animation montages while weapon animations need to be animation sequences, however there is one exception to this rule with shooting animations
 :::
-## Using shooting montages for weapon animation
+### Using shooting montages for weapon animation
 * **Anim_Shoot_Weapon_Montage** This variable will allow the weapon to play a shooting montage with blending and is mostly reserved for akimbo weapon setups
 :::caution
 Using "Anim_Shoot_Weapon_Montage" is driven from "Anim_Shoot_Weapon_M" as such both need to share the same indexes for animations.
