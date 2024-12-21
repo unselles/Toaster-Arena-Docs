@@ -4,7 +4,13 @@ sidebar_position: 1
 
 # Physics-Based Magazines
 
-The first step is to create a Data Asset that provides the weapon actor with necessary information about the physics-based magazine. Follow these steps:
+:::caution
+This documentation may be outdated, use with caution.
+:::
+
+The first step is to create a `Data Asset` that provides the weapon actor with necessary information about the physics-based magazine. 
+
+Follow these steps:
 
 1. Navigate to the appropriate folder in your Unreal Engine project.
 2. Create a new `Data Asset`.
@@ -25,10 +31,9 @@ Once the Data Asset is created, you can configure the following properties:
 * **Notify Driven? (False):** The magazine will spawn once the reload animation finishes, causing a slight delay in its appearance.
 * **Notify Driven? (True):** The magazine will spawn based on animation notify events, providing more precise control over the timing.
 
-
 ### Adding Magazine Creation Anim Notifies
 
 1. Open the weapon animation sequence that includes a reload action.
 2. Add the `Anim_ForceMag` notify to the animation timeline.
 3. If the weapon reloads in third-person, check the designated box to enable this functionality. (Important!)
-4. Navigate to the weapon Blueprint (BP), search for `DA Mags`, and select the newly created Mag Data Asset.
+4. Navigate to the weapon Blueprint (BP), search for `DA_Mags`, and select the newly created Mag Data Asset.
