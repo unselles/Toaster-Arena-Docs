@@ -72,7 +72,7 @@ const config: Config = {
         respectPrefersColorScheme: false,
       },
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+ //   image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Welcome',
       logo: {
@@ -111,11 +111,11 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.com/invite/tejqXqg894',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/Shadow_Hawk_09',
             },
           ],
         },
@@ -128,7 +128,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/unselles/Toaster-Arena-Docs',
             },
           ],
         },
