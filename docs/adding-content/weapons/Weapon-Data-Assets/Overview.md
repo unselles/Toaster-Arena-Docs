@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-### Overview for weapon data assets
+### Weapon Data Assets
 
 :::caution
 This is a highly complex system with a lot of atributes, all the values should be documented here. But if some are missing, descriptions can be found at the `Data Asset` variables.
