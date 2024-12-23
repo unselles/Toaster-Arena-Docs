@@ -36,6 +36,15 @@ Using "Anim_Shoot_Weapon_Montage" is driven from "Anim_Shoot_Weapon_M" as such b
 Using animation montages also requieres that the weapon has it's own animation blueprint. The reference variable can be set at `Animations > Systems > AnimInstance`
 :::
 
+
+
+
+### Animations > Systems 
+* **AnimInstance:** Animation blueprint that this weapon will use (Only for akimbo setups).
+* **RecoilAnimation:** Recoil Animation used for TP (-1=None, 0=Light, 1=Medium, 2=Heavy).
+
+
+
 ### Settings > Info > Icons
 * **Show_icons:** This Weapon will show objective icons on the player that has the weapon equiped.
 * **Icon_Ally:** Icon that will be visible to ally players of whoever holds this weapon.
@@ -168,17 +177,155 @@ Using animation montages also requieres that the weapon has it's own animation b
 
 
 
-
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
-* **Model:** Skeletal mesh asset that this weapon will use.
+### Settings > Reloading > Pump
+* **Pump_Reloads:** Makes the weapon use a pump animation when a reload finishes (This pump is smart).
 
 
 
+### Settings > Reloading > Mag
+* **DA_Mag:** Physics mag data asset that this weapon will use.
 
+
+
+### Settings > Reloading
+* **Reload_type:** How this weapon reloads ( Mag= single mag reload, per bullet = Used for shotguns (needs to use propper animation setup) Energy = Weapon reloads automatically after a preiod of time (used for plasma weapons) Skip animation = weapon skips the reload sequence and instant reloads).
+* **Reload_notify:** Reload happens on animation event intead of animation end (Used for weapons that you want to have the ammo count change instead of waiting for the animation to finish Ex, placing a mag should update the ammo counter (Notify driven).
+* **Reloading_hand:** Hand that reloads this weapon, it will disable ik on the hand when weapon reloads.
+
+
+
+### Settings > Damage
+* **DamageMultOnShields:** If enabled damage multiplers will affect if player has shields (Used for AT sniper headshots that instantly kill players).
+* **DamageBase:** Base damage of this gun.
+* **ShotsToKillNoShields:** How many hits it takes the gun to perform base damage from up close based on range values (also used for damage falloff and splashdamage).
+* **ShotsToKillNoShieldsMin:** How many hits it takes the gun to perform base damage from far away based on range values (also used for damage falloff and splashdamage).
+* **ShotsToKillShields:** How many hits it takes the gun to perform base shield damage from up close based on range values (also used for damage falloff and splashdamage).
+* **ShotsToKillShieldsMin:** How many hits it takes the gun to perform base shield damage from far away based on range values (also used for damage falloff and splashdamage).
+* **Damage_multipliers:** Used to provide damage multiplication based on hitboxes (Headshots dealing double damage for some weapons).
+* **Damage_multiplierNames:** Used in combination with damage multipliers variable.
+* **Gore?:** Does this weapon dismember characters when killing?.
+* **ExplodeLimbs?:** Will this weapon explode characters in to pieces when killing?.
+
+
+
+### Settings > Bullets
+* **Bullets-current:** Starting bullets of the weapon.
+* **Bullets-max:** Max bullet count of the weapon.
+
+
+
+### Settings > Mags
+* **Mags-current:** Starting ammount of reserve ammo for the weapon.
+* **Mags-max:** Max ammount of reserve ammo for the weapon.
+
+
+
+### Settings > Inventory > Multiplayer
+* **Weapon_collum_MP:** Slot collum used for this weapon.
+* **Weapon_row_MP:** Slot row used for this weapon.
+
+
+
+### Settings > Inventory > Singleplayer
+* **Weapon_collum_SP:** Slot collum used for this weapon.
+* **Weapon_row_SP:** Slot row used for this weapon.
+
+
+
+### Settings > Inventory
+* **MultiplayerWeapon?:** Does this weapon use the multiplayer slots or the singleplayer slots?.
+
+
+
+### Settings > Falloff
+* **Damage_falloff:** Will the damage of this weapon be reduced by range.
+* **Reverse_fall_off:** Is the damage falloff reversed for this weapon? This means that the further the weapon is from a tarquet, the more damage it does.
+* **Reverse_fall_off_range:** How far does this weapon need to be on maximun damage range.
+* **Falloff_MaxLength:** Max distance length for calculation falloff damage Longer distances is less damage.
+
+
+
+### Settings > AI > Hearing
+* **CanAIHear?:** Can AI characters hear this weapon shoot?.
+* **ShootingMaxRange:** Maximun range that the AI will be allowed to be distanced from to be able to hear the weapon shoot.
+* **ShootingLoudness:** Loudness value for the gun (used to multiply by the max range.
+
+
+
+### Settings > AI > Squad
+* **Squad_CQCScore:** Factor that determines how likeley the AI will use this weapon on close quarters combat (Singleplayer only).
+* **Squad_LongRangeScore:** Factor that determines how likeley the AI will use this weapon on Long range combat (Singleplayer only).
+* **Squad_SupressionScore:** Factor that determines how likeley the AI will use this weapon on supression(Singleplayer only).
+
+
+
+### Settings > Physics
+* **Backwards_push:** Force to apply the player while airbone and shooting (Double barrell shotgun jumping).
+* **Physics_impulse:** How much fore to apply to ragdolls or physics objects on hit.
+* **Rocket_jumping_force:** Force to apply for rocket jumping physics.
+
+
+
+### Settings > Overheat
+* **Ammount_to_vent:** How much heat does this weapon vent per delay.
+* **Vent_speed:** Delay based how much in seconds it takes to delay one digit of heat.
+* **Vent_start_delay:** Delay for how long it takes this weapon to start venting heat.
+
+
+
+
+### Settings > Fixes
+:::caution
+Weapon fixes and offset tweaks can now be made entierly in engine by using the weapon offset tool that can be found at `Pause menu> Remote admin > Game CMD > Weapon offset tool`
+:::
+
+
+
+### Settings > Debuff
+* **List of Active buff's or debuff's:** Character debuffs that this weapon applies when equiped at the player hands.
+* **List of Pasive buff's or debuff's:** Character debuffs that this weapon applies when on the player inventory.* 
+* **Buff's to apply on enemy:** Character debuffs that will be applied to characters that recieve damage from the weapon that arent on the player's team (Fire Damage).
+* **Buff's to apply on ally:** Character debuffs that will be applied to characters that recieve damage from the weapon that are on the player's team (Healing buff from heal cannon).
+* **BuffsToRemoveFromAlly:** Character debuffs that will be removed to characters that recieve damage from the weapon that are on the player's team (Fire extinguisher to allies).
+
+
+
+### Settings > IK
+* **Arm_IK:** Arm Ik chains that this weapon affects .
+* **LeftIkSocket:** Hand socket that the IK will be used from (deprecated).
+* **RightIkSocket:** Hand socket that the IK will be used from (deprecated).
+* **UseOldIKMethod:** Uses old Ik method where the character hands are driven by weapon IK bones (Deprecated and should not be used).
+* **LeftHandWeapon2IK:** Makes the left hand use ik from the weapon bone 2, usefull for dualweild or one handed melee weapons.
+* **NonIKPlayAnims:** Makes non IK hands play weapon animations (Usefull for melee weapons that only use one hand.
+* **Force_FabrIK_TP:** Forces IK to use FABRIK instead of poles (Usefull for melee weapons).
+* **NonIkLocomotion:** Makes non IK weapons run locomotion (used for weapons that are one handed and have the other hand do something else like a moving animation).
+
+
+
+### Settings > TP
+* **TPHoldMode:** Pose for the character for holding this weapon, this affects pitch and yaw transforms (Entierly code driven).
+
+
+
+### Settings > Debug
+* **Debug_shooting_rays:** Will show debug traces on the editor (Used for tweaking Range, Spread and falloff).
+
+
+
+### Settings > Underwater
+* **ShootUnderWater:** Can this weapon shoot underwater.
+
+
+
+### Settings > Skin
+* **Allow_skins:** Does this weapon allow the player to load skins on it .
+* **CasingsUseSkins:** Do the casings for this weapon use skins?.
+
+
+
+### Settings > Gameplay > Auto Reload
+* **AutoReload?:** Will this weapon auto reload if posible (Player has the setting enabled) (This is disabled for tools but normal weapons should have it enabled).
+
+:::caution
+This is it for now.
+:::
