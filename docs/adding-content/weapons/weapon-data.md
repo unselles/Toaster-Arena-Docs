@@ -2,14 +2,12 @@
 sidebar_position: 1
 ---
 
-### Weapon Data Assets
+# Weapon Data Assets
 
 :::caution
-This is a highly complex system with a lot of atributes, all the values should be documented here. But if some are missing, descriptions can be found at the `Data Asset` variables.
-:::
+This is a highly complex system with a lot of attributes, all the values should be documented here. But if some are missing, descriptions can be found at the `Data Asset` variables.
 
-:::caution
-Weapons on TA are fully data oriented and not actor based, this means that we cant code in custom behaviour for them unless we use an intermediate object such as the `Debuff System`.
+Weapons are fully data oriented and not 'actor' based, this means that we can't code in custom behaviours unless we use an intermediate object such as the `Debuff System`.
 :::
 
 The first step is to create a `Data Asset` that provides the game with enough information regarding a weapon.
@@ -25,12 +23,12 @@ Once the Data Asset is created, you can configure the following properties:
 ### Animations
 These are a combination of animation montages used for character animation and aniamtion sequences for weapons
 
-:::caution
+:::danger
 Character animation must be strictly animation montages while weapon animations need to be animation sequences, however there is one exception to this rule with shooting animations
 :::
 ### Using shooting montages for weapon animation
 * **Anim_Shoot_Weapon_Montage** This variable will allow the weapon to play a shooting montage with blending and is mostly reserved for akimbo weapon setups
-:::caution
+:::info
 Using "Anim_Shoot_Weapon_Montage" is driven from "Anim_Shoot_Weapon_M" as such both need to share the same indexes for animations.
 
 Using animation montages also requieres that the weapon has it's own animation blueprint. The reference variable can be set at `Animations > Systems > AnimInstance`
@@ -275,8 +273,8 @@ Using animation montages also requieres that the weapon has it's own animation b
 
 
 ### Settings > Fixes
-:::caution
-Weapon fixes and offset tweaks can now be made entierly in engine by using the weapon offset tool that can be found at `Pause menu> Remote admin > Game CMD > Weapon offset tool`
+:::info
+Weapon fixes and offset tweaks can now be made entirely in engine by using the weapon offset tool that can be found at `Pause menu> Remote admin > Game CMD > Weapon offset tool`
 :::
 
 
@@ -325,7 +323,3 @@ Weapon fixes and offset tweaks can now be made entierly in engine by using the w
 
 ### Settings > Gameplay > Auto Reload
 * **AutoReload?:** Will this weapon auto reload if posible (Player has the setting enabled) (This is disabled for tools but normal weapons should have it enabled).
-
-:::caution
-This is it for now.
-:::

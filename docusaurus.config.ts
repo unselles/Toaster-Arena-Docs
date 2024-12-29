@@ -74,7 +74,7 @@ const config: Config = {
     // Replace with your project's social card
  //   image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Welcome',
+      title: 'Toaster Arena',
       logo: {
         alt: 'Logo',
         src: 'img/T_PlaceholderLogo.png',
@@ -122,10 +122,10 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
+/*            {
               label: 'Blog',
               to: '/blog',
-            },
+            },*/
             {
               label: 'GitHub',
               href: 'https://github.com/unselles/Toaster-Arena-Docs',
@@ -133,7 +133,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Toaster Arena, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Toaster Arena`,
     },
     prism: {
       theme: prismThemes.github,
