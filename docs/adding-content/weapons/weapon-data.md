@@ -172,6 +172,7 @@ Using animation montages also requieres that the weapon has it's own animation b
 * **Damage_self_on_shoot:** Damage the weapon owner when whooting the gun (Used under certain cases and mostly for technical setups such as a health injector that damages the player before healing them).
 * **CustomRayThickness:** Will use custom values from Ray_Thickness instead of a predefined value.
 * **HirmarkerOnDamage:** Show a hitmarker when damaging something (leave as default unless weapon is special or a consumamble).
+* **UsePhysicalFireDirection:** Instead of using camera related traces, this weapon will use the direction of a parent bone (Used for vehicle cannons were you dont want to shoot to were the camera is looking but rather then barell direction.
 
 
 
