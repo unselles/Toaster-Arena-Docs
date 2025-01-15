@@ -156,6 +156,14 @@ Using animation montages also requieres that the weapon has it's own animation b
 
 
 
+### Settings > Shooting > Vehicle
+* **UsePhysicalFireDirection:** Instead of using camera related traces, this weapon will use math to combine camera and barell traces to ensure that the weapon can be fired from barells while matching camera rotations.
+* **VehicleWeaponRotationSpeed:** Simulated rotational speed of this vehicle weapon (The physical cannon of vehicles will use this to drive the animation) (Smaller values = Faster).
+* **VehicleWeaponMaxPitch:** Maximun pitch rotation of this weapon (How up can this cannon look to).
+* **VehicleWeaponMinPitch:** Minimun pitch rotation of this weapon (How down can this cannon look to).
+
+
+
 ### Settings > Shooting
 * **Fire_delay:** Delay in seconds that this weapon takes per shot.
 * **Ray_lenght:** Hitscan ray length when shooting.
@@ -172,7 +180,7 @@ Using animation montages also requieres that the weapon has it's own animation b
 * **Damage_self_on_shoot:** Damage the weapon owner when whooting the gun (Used under certain cases and mostly for technical setups such as a health injector that damages the player before healing them).
 * **CustomRayThickness:** Will use custom values from Ray_Thickness instead of a predefined value.
 * **HirmarkerOnDamage:** Show a hitmarker when damaging something (leave as default unless weapon is special or a consumamble).
-* **UsePhysicalFireDirection:** Instead of using camera related traces, this weapon will use the direction of a parent bone (Used for vehicle cannons were you dont want to shoot to were the camera is looking but rather then barell direction.
+*
 
 
 
