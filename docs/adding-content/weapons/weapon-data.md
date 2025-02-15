@@ -129,6 +129,7 @@ Using animation montages also requieres that the weapon has it's own animation b
 
 
 ### Settings > Shooting > Projectile
+* **BuildableClass:** Used for player made buildables like sentries or barricades.
 * **Projectile_class:** Projectile class that this weapon will (only avilable if the fire_mode is set to projectile).
 * **Server_only_spawning?:** Makes it so that only the server spawns the projectile(Used for item throwables).
 * **ProjectileBehaviour:** How will this projectile behaved when created.
